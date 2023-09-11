@@ -1,6 +1,6 @@
 # v-diffusion-pytorch
 
-v objective diffusion inference code for PyTorch, by Katherine Crowson ([@RiversHaveWings](https://twitter.com/RiversHaveWings)) and Chainbreakers AI ([@jd_pressman](https://twitter.com/jd_pressman)).
+v objective diffusion inference code for PyTorch, by Vandana Kattamreddy
 
 The models are denoising diffusion probabilistic models (https://arxiv.org/abs/2006.11239), which are trained to reverse a gradual noising process, allowing the models to generate samples from the learned data distributions starting from random noise. The models are also trained on continuous timesteps. They use the 'v' objective from Progressive Distillation for Fast Sampling of Diffusion Models (https://openreview.net/forum?id=TIdIXIpzhoI). Guided diffusion sampling scripts (https://arxiv.org/abs/2105.05233) are included, specifically CLIP guided diffusion. This repo also includes a diffusion model conditioned on CLIP text embeddings that supports classifier-free guidance (https://openreview.net/pdf?id=qw8AKxfYbI), similar to GLIDE (https://arxiv.org/abs/2112.10741). Sampling methods include DDPM, DDIM (https://arxiv.org/abs/2010.02502), and PRK/PLMS (https://openreview.net/forum?id=PlKWVd2yBkY).
 
@@ -30,7 +30,7 @@ A 481M parameter unconditional model trained on a 33 million image original reso
 
 A 968M parameter unconditional model trained on a 33 million image original resolution subset of [Yahoo Flickr Creative Commons 100 Million](http://projects.dfki.uni-kl.de/yfcc100m/).
 
-It also contains PyTorch ports of the four models from [v-diffusion-jax](https://github.com/crowsonkb/v-diffusion-jax), `danbooru_128`, `imagenet_128`, `wikiart_128`, `wikiart_256`:
+It also contains PyTorch ports of the four models from [v-diffusion-jax](https://github.com/Vandanak-coder/v-diffusion-jax), `danbooru_128`, `imagenet_128`, `wikiart_128`, `wikiart_256`:
 
 - [Danbooru SFW 128x128](https://the-eye.eu/public/AI/models/v-diffusion/danbooru_128.pth), SHA-256 `1728940d3531504246dbdc75748205fd8a24238a17e90feb82a64d7c8078c449`
 
@@ -55,7 +55,7 @@ If they are somewhere else, you need to specify the path to the checkpoint with 
 
 ### Colab
 
-There is a cc12m_1_cfg Colab (a simplified version of `cfg_sample.py`) [here](https://colab.research.google.com/drive/1TBo4saFn1BCSfgXsmREFrUl3zSQFg6CC), which can be used for free.
+There is a cc12m_1_cfg Colab (a simplified version of `cfg_sample.py`) [here](https://colab.research.google.com/drive/1KSSufk7j7CrWpEHoTMOjBvW6DkiNmRFm), which can be used for free.
 
 ### CFG sampling (best, but only cc12m_1_cfg supports it)
 
